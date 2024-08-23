@@ -5,6 +5,7 @@ import HeadNAV from './HeadNAV';
 import { Container } from 'reactstrap'
 import EForms from './EForms';
 import OListO from './OListO';
+import FooterBelow from './FooterBelow';
 
 const ALL_EXPENSES = [
   { id: 1, name: 'Buy a book', amount: 20 },
@@ -59,8 +60,8 @@ function App() {
   return (
     <div>
       <HeadNAV />
-      <Container className="text-center">
-        <h3 className="display-6">
+      <Container className="text-center py-2">
+        <h3 className="display-6 py-5">
           Track Your Expenses
           <img src={Logo} style={{ width: 50, height: 50 }} alt="react-logo" />
         </h3>
@@ -85,6 +86,7 @@ function App() {
         />
         <OListO expenses={expenses} />
       </Container>
+      <FooterBelow/>
     </div>
 
   );
